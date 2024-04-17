@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Bitter;
+    src: url(elements/Bitter.ttf);
+}
+body{
+    padding-top: 10px;
+
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: rgb(12, 12, 55);
+}
+
+body h3{
+    font-family: Bitter, Arial, Helvetica;
+    font-weight: 600;
+    color: hsl(207, 100%, 50%);;
+    /* margin-bottom: 0%; */
+}
+
+
+.navbar{
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+.navbar a{
+    text-decoration: none;
+    column-gap: 3px;
+    padding: 15px;
+    color: rgb(12, 12, 55);
+}
+.navbar a:hover{
+    font-weight: bold;
+}
+
+.navbar a.active{
+    font-weight: bold;
+}
+
+
+
+header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 2.15em;
+    font-family: Bitter, Arial, Helvetica;
+    font-weight: 500;
+    display: inline;
+
+}
+
+header h3{
+    font-size: 1.4em;
+    font-weight: 600;
+    color: black;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+header img{
+    width: 180px;
+}
+
+
+
+
+#skill{
+    margin-top: 10px;
+    width: 100px;
+    height: 10px;
+}
+
+#loading{
+    width: 100px;
+    height: 10px;
+    background-color: hsl(0, 0%, 95%);
+    position: relative;     
+    bottom: 5px;             
+    left: 120px;
+ }
+
+#level{
+    height: 10px;
+    background-color: hsl(122, 63%, 65%);
+    position: absolute;     
+}
+
+
+
+
+
+
+.projectName{
+    font-size: 1.2em;
+    display: inline;
+}
+.date{
+    font-size: 80%;
+    display: inline;
+    float: right;
+    position: relative;
+    bottom: 6px;
+}
+
+.fa-brands.fa-github{
+    scale: 0.8;
+    position: relative;
+    left: 6px;
+}
+.projectBullet{
+    font-size: 90%;
+}
+
+
+footer p{
+    font-size: 0%;
+    text-align: right;
+    color: hsl(0, 0%, 36%);
+    margin: 0px;
+}
