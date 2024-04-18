@@ -1,127 +1,274 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 @font-face {
-    font-family: Bitter;
-    src: url(elements/Bitter.ttf);
-}
-body{
-    padding-top: 10px;
-
-    width: 500px;
-    margin: auto;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    color: rgb(12, 12, 55);
+  font-family: Bitter;
+  src: url(assets/Bitter.ttf);
 }
 
-body h3{
-    font-family: Bitter, Arial, Helvetica;
-    font-weight: 600;
-    color: hsl(207, 100%, 50%);;
-    /* margin-bottom: 0%; */
+/* CSS variables */
+:root {
+  --black: #222298;
 }
 
-
-.navbar{
-    text-align: center;
-    padding-bottom: 20px;
-    
-}
-.navbar a{
-    text-decoration: none;
-    column-gap: 3px;
-    padding: 15px;
-    color: rgb(12, 12, 55);
-}
-.navbar a:hover{
-    font-weight: bold;
+body {
+  width: 500px;
+  margin: 20px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  line-height: 22px;
 }
 
-.navbar a.active{
-    font-weight: bold;
+body h3 {
+  font-family: Bitter, Arial, Helvetica;
+  font-weight: 600;
+  font-size: 22px;
+  color: #0281e9;
+  margin: 50px 0 12px;
 }
 
-
-
-header{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.navbar {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--black);
+  /* margin-bottom: 25px; */
+  display: flex;
+  justify-content: center;
 }
 
-h1{
-    font-size: 2.15em;
-    font-family: Bitter, Arial, Helvetica;
-    font-weight: 500;
-    display: inline;
-
+.navbar a {
+  text-decoration: none;
+  color: var(--black);
+  width: 100px;
 }
 
-header h3{
-    font-size: 1.4em;
-    font-weight: 600;
-    color: black;
-    display: inline-block;
-    margin-top: 10px;
+.navbar a:hover {
+  font-weight: bold;
 }
 
-header img{
-    width: 180px;
+.navbar a.active {
+  font-weight: bold;
 }
 
-
-
-
-#skill{
-    margin-top: 10px;
-    width: 100px;
-    height: 10px;
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-#loading{
-    width: 100px;
-    height: 10px;
-    background-color: hsl(0, 0%, 95%);
-    position: relative;     
-    bottom: 5px;             
-    left: 120px;
- }
-
-#level{
-    height: 10px;
-    background-color: hsl(122, 63%, 65%);
-    position: absolute;     
+h1 {
+  font-family: Bitter, Arial, Helvetica;
+  font-size: 36px;
+  columns: var(--black);
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 25px;
 }
 
-
-
-
-
-
-.projectName{
-    font-size: 1.2em;
-    display: inline;
-}
-.date{
-    font-size: 80%;
-    display: inline;
-    float: right;
-    position: relative;
-    bottom: 6px;
+header h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black);
+  margin-top: 20px;
 }
 
-.fa-brands.fa-github{
-    scale: 0.8;
-    position: relative;
-    left: 6px;
-}
-.projectBullet{
-    font-size: 90%;
+header img {
+  width: 180px;
 }
 
+.skillList {
+  margin-left: 16px;
+}
 
-footer p{
-    font-size: 0%;
-    text-align: right;
-    color: hsl(0, 0%, 36%);
-    margin: 0px;
+.skillName {
+  margin-top: 10px;
+  width: 100px;
+  height: 6px;
+}
+
+.loading {
+  width: 100px;
+  height: 10px;
+  background-color: #f2f2f2dc;
+  position: relative;
+  left: 120px;
+}
+
+.level {
+  height: 10px;
+  background-color: hsl(122, 63%, 65%);
+  position: absolute;
+}
+
+.language {
+  line-height: 26px;
+  margin-left: 16px;
+  margin-bottom: 50px;
+}
+
+footer p {
+  font-size: 12px;
+  text-align: right;
+  color: var(--black);
+}
+
+.title {
+  display: inline;
+}
+
+.date {
+  display: inline;
+  font-size: 14px;
+  float: right;
+}
+
+.titleDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectBullet {
+  font-size: 90%;
+  margin-left: 26px;
+}
+
+.fa-brands.fa-github {
+  scale: 0.8;
+  position: relative;
+  left: 6px;
+}
+
+/* CONTACTS */
+.contacts {
+  margin: 50px 0 50px 20px;
+  font-size: 18px;
+  line-height: 33px;
 }
