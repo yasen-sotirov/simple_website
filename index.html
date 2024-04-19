@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
-    <title>YS About</title>
+    <title>Yasen Sotirov Homepage</title>
   </head>
 
   <body>
@@ -25,8 +25,10 @@
     </header>
 
     <main>
-      <div>
-        <h3>SUMMARY</h3>
+      <div class="section-container">
+        <div class="title-with-date">
+          <h3>SUMMARY</h3>
+        </div>
         <p>
           I am a practical person who values common sense and pragmatic
           solutions. From a young age, I have been driven by a strong sense of
@@ -35,48 +37,71 @@
         </p>
       </div>
 
-      <div>
-        <h3>TECHNOLOGIES</h3>
-        <div class="skillList">
-          <div class="skillName">Python</div>
-          <div class="loading">
-            <div class="level" style="width: 80%"></div>
-          </div>
-
-          <div class="skillName">JavaScript</div>
-          <div class="loading">
-            <div class="level" style="width: 32%"></div>
-          </div>
-
-          <div class="skillName">HTML</div>
-          <div class="loading">
-            <div class="level" style="width: 48%"></div>
-          </div>
-
-          <div class="skillName">CSS</div>
-          <div class="loading">
-            <div class="level" style="width: 48%"></div>
-          </div>
-
-          <div class="skillName">FastAPI</div>
-          <div class="loading">
-            <div class="level" style="width: 55%"></div>
-          </div>
-
-          <div class="skillName">MariaDB</div>
-          <div class="loading">
-            <div class="level" style="width: 43%"></div>
-          </div>
-
-          <div class="skillName">MariaDB</div>
-          <div class="loading">
-            <div class="level" style="width: 38%"></div>
-          </div>
+      <div class="section-container">
+        <div class="title-with-date">
+          <h3>TECHNOLOGIES</h3>
         </div>
+
+        <ul class="skill-list">
+          <li>
+            <div class="skill-name">Python</div>
+            <div class="loading">
+              <div style="width: 80%"></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-name">JavaScript</div>
+            <div class="loading">
+              <div style="width: 32%"></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-name">HTML</div>
+            <div class="loading">
+              <div style="width: 43%"></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-name">CSS</div>
+            <div class="loading">
+              <div style="width: 43%"></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-name">
+              <a href="https://fastapi.tiangolo.com/" target="_blank"
+                >FastAPI</a
+              >
+            </div>
+            <div class="loading">
+              <div style="width: 55%"></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-name">MariaDB</div>
+            <div class="loading">
+              <div class="level" style="width: 43%"></div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-name">PostgreSQL</div>
+            <div class="loading">
+              <div class="level" style="width: 38%"></div>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <div>
-        <h3>LANGUAGES</h3>
+      <div class="section-container">
+        <div class="title-with-date">
+          <h3>LANGUAGES</h3>
+        </div>
         <div class="language">
           <p>English - intermediate</p>
           <p>Bulgarian - native</p>
@@ -84,8 +109,6 @@
       </div>
     </main>
 
-    <footer>
-      <p>v1.0</p>
-    </footer>
+    <footer>v1.0</footer>
   </body>
 </html>
