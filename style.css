@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -128,37 +128,61 @@ table {
   border-spacing: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 @font-face {
   font-family: Bitter;
   src: url(assets/Bitter.ttf);
 }
 
-/* CSS variables */
+/* Global styles */
 :root {
-  --black: #222298;
+  --white: #fff;
+  --black: #0f172a;
+  --gray: #475569;
+  --blue: #0281e9;
 }
 
 body {
-  width: 500px;
-  margin: 20px auto;
-  font-family: Arial, Helvetica, sans-serif;
   color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 22px;
+  margin: 20px auto;
+  font-size: 1.125rem;
+  width: 600px;
 }
 
-body h3 {
-  font-family: Bitter, Arial, Helvetica;
+h1,
+h2 {
+  color: var(--black);
+  font-family: Bitter;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
+}
+
+h3 {
+  color: var(--blue);
+  font-family: Bitter;
+  font-size: 24px;
   font-weight: 600;
-  font-size: 22px;
-  color: #0281e9;
-  margin: 50px 0 12px;
 }
 
+/* Page specific styles */
+
+/* Navbar start */
 .navbar {
   text-align: center;
   padding-bottom: 10px;
+  margin-bottom: 20px;
   border-bottom: 2px solid var(--black);
-  /* margin-bottom: 25px; */
   display: flex;
   justify-content: center;
 }
@@ -176,20 +200,14 @@ body h3 {
 .navbar a.active {
   font-weight: bold;
 }
+/* Navbar end */
 
+/* Header start */
 header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-}
-
-h1 {
-  font-family: Bitter, Arial, Helvetica;
-  font-size: 36px;
-  columns: var(--black);
-  font-weight: 500;
-  display: inline-block;
-  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 header h3 {
@@ -203,25 +221,35 @@ header img {
   width: 180px;
 }
 
-.skillList {
+/* Header end */
+
+ul.skill-list {
   margin-left: 16px;
 }
 
-.skillName {
-  margin-top: 10px;
-  width: 100px;
-  height: 6px;
+ul.skill-list li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
 }
 
-.loading {
+ul.skill-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+ul.skill-list li .skill-name {
+  width: 100px;
+}
+
+ul.skill-list li .loading {
   width: 100px;
   height: 10px;
   background-color: #f2f2f2dc;
   position: relative;
-  left: 120px;
 }
 
-.level {
+ul.skill-list li .loading > div {
   height: 10px;
   background-color: hsl(122, 63%, 65%);
   position: absolute;
@@ -233,31 +261,30 @@ header img {
   margin-bottom: 50px;
 }
 
-footer p {
-  font-size: 12px;
-  text-align: right;
-  color: var(--black);
-}
-
-.title {
-  display: inline;
-}
-
-.date {
-  display: inline;
-  font-size: 14px;
-  float: right;
-}
-
-.titleDate {
+.title-with-date {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  line-height: 32px;
+  margin-bottom: 12px;
 }
 
-.projectBullet {
-  font-size: 90%;
+.title-with-date .date {
+  font-size: 14px;
+}
+
+/* Section Container start */
+
+.section-container:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+ul.project-bullet {
   margin-left: 26px;
+  list-style-type: disc;
+}
+ul.project-bullet li {
+  line-height: 24px;
 }
 
 .fa-brands.fa-github {
@@ -265,10 +292,39 @@ footer p {
   position: relative;
   left: 6px;
 }
+/* Section Container end */
 
-/* CONTACTS */
+/* Contacts start */
 .contacts {
   margin: 50px 0 50px 20px;
   font-size: 18px;
   line-height: 33px;
 }
+/* Contacts end */
+
+.cv-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.cv-container a {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 16px;
+  line-height: 36px;
+  padding: 0 24px;
+}
+.cv-container a:hover {
+  background-color: var(--gray);
+}
+
+/* Footer start */
+footer {
+  color: var(--black);
+  font-size: 13px;
+  text-align: right;
+}
+/* Footer end */
