@@ -226,37 +226,26 @@ header img {
 }
 
 /* Header end */
-
-ul.skill-list {
-  margin-left: 16px;
+/* list items */ 
+.skill {
+  padding-bottom: 18px;
 }
 
 ul.skill-list li {
   align-items: center;
-  display: flex;
   justify-content: space-between;
-  width: 250px;
-}
-
-ul.skill-list li:not(:last-child) {
-  margin-bottom: 10px;
+  width: 550px;
 }
 
 ul.skill-list li .skill-name {
   width: 100px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-ul.skill-list li .loading {
-  width: 100px;
-  height: 10px;
-  background-color: #f2f2f2dc;
-  position: relative;
-}
-
-ul.skill-list li .loading > div {
-  height: 10px;
-  background-color: hsl(122, 63%, 65%);
-  position: absolute;
+ul.skill-description {
+  font-size: 14px;
+  margin-left: 12px;
 }
 
 .language {
